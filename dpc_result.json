@@ -1,0 +1,397 @@
+{
+  "class": "Denominator-Privilege Class (DPC)",
+  "discovery_id": "DPC-2026-10-07",
+  "session": "2026-10-07T17:40:00Z",
+  "formula": "40 * denom_as_count * rewrite_magnitude * evidence * (1-spoken) * (1-prior_overlap)",
+  "kill_rule": "If the pipeline already treats the denominator as a first-class estimand with its own error, the instance leaves DPC.",
+  "archive_subtracted": [
+    "Dark Biosphere",
+    "TAC",
+    "Cadence Mismatch",
+    "NCR",
+    "FAC",
+    "CIC",
+    "JAC",
+    "IOA",
+    "DIC",
+    "PPC",
+    "UCC",
+    "DCC",
+    "FCC",
+    "OAC",
+    "UPRC",
+    "CIP",
+    "TPC",
+    "CMC",
+    "EFC",
+    "IPC",
+    "SBC",
+    "IRC",
+    "SEC",
+    "RJC",
+    "ANC",
+    "UEDP",
+    "FPC",
+    "PDC",
+    "RD Plane-Split",
+    "CHL",
+    "CLOSED-2026-09-30",
+    "CLOSED-2026-10-02",
+    "CLOSED-2026-10-04",
+    "CLOSED-2026-10-05"
+  ],
+  "n_cases": 9,
+  "n_keep": 7,
+  "ranking": [
+    {
+      "id": "nmfs_fes_striped_bass",
+      "realm": "ocean",
+      "quantity": "2024 total striped bass catch (count of fish)",
+      "numerator_object": "striped bass landed or released",
+      "denominator_construct": "Fishing Effort Survey private-boat and shore trips treated as observed",
+      "score": 19.1429,
+      "ruling": "keep",
+      "role": "primary",
+      "status": "confirmed",
+      "factors": {
+        "denom_as_count": 0.94,
+        "rewrite_magnitude": 0.86,
+        "evidence": 1.0,
+        "spoken": 0.2,
+        "prior_overlap": 0.26,
+        "unspoken": 0.8,
+        "novelty_vs_archive": 0.74
+      },
+      "source": "NMFS FES revision, 31 Aug 2026; Marine Fish Conservation Network 2 Oct 2026. 20,822,514 \u2192 14,323,640 (\u221231.2%). Live releases 19,093,770 \u2192 13,111,145 (\u221231.3%).",
+      "notes": "No fish moved. Effort overreporting in two-month waves was the denominator. Catch = CPUE \u00d7 effort. Management did not immediately change; the privileged number remains in the catch-limit machine until stock assessments re-ingest it."
+    },
+    {
+      "id": "eta_earth_completeness",
+      "realm": "outer space",
+      "quantity": "habitable-zone rocky occurrence rate \u03b7\u2295",
+      "numerator_object": "transiting HZ planet candidates",
+      "denominator_construct": "survey completeness / selection function treated as the observed search volume",
+      "score": 11.9066,
+      "ruling": "keep",
+      "role": "co-primary",
+      "status": "confirmed",
+      "factors": {
+        "denom_as_count": 0.88,
+        "rewrite_magnitude": 0.9,
+        "evidence": 0.9,
+        "spoken": 0.42,
+        "prior_overlap": 0.28,
+        "unspoken": 0.58,
+        "novelty_vs_archive": 0.72
+      },
+      "source": "Astronomy & Computing 57 (Oct 2026) art. 101170: raw HZ rates 0.33% F/G, 0.72% K, 4.03% M; completeness-corrected \u03b7\u2295(K)=0.266, \u03b7\u2295(M)=0.408; raw counts must be scaled 10\u201337\u00d7. Bryson et al. PASP; arXiv:2511.05658 (7 Nov 2025): published \u03b7\u2295 spans >10\u00d7.",
+      "notes": "Completeness correction is standard (spoken as method). DPC remainder: raw NASA Exoplanet Archive rates are still published and cited as occurrence. Different completeness models rewrite \u03b7\u2295 by an order of magnitude with no planet appearing or disappearing."
+    },
+    {
+      "id": "unbinned_contig_discoverable",
+      "realm": "land",
+      "quantity": "named / cultured fraction of bacterial species",
+      "numerator_object": "genomically represented species (MAG / isolate)",
+      "denominator_construct": "discoverable species-level clades in unbinned contigs treated as the 'all microbes' set",
+      "score": 11.6301,
+      "ruling": "keep",
+      "role": "co-primary",
+      "status": "confirmed",
+      "factors": {
+        "denom_as_count": 0.78,
+        "rewrite_magnitude": 0.82,
+        "evidence": 0.94,
+        "spoken": 0.22,
+        "prior_overlap": 0.38,
+        "unspoken": 0.78,
+        "novelty_vs_archive": 0.62
+      },
+      "source": "Nature Microbiology (2 Apr 2026) DOI 10.1038/s41564-026-02314-6. 92,187 metagenomes; ~705,000 bacterial and ~27,000 archaeal species-level clades; 145 previously undescribed bacterial phyla discoverable; gap between discovered and discoverable is widening.",
+      "notes": "The cultured fraction's denominator is not a fixed census. It grows with unbinned-contig clustering. More looking enlarges the denom; the named fraction falls. Remainder-Growth is queued, not minted. DPC owns the privilege of treating discoverable-set as 'all microbes'."
+    },
+    {
+      "id": "dark_taxa_ectomycorrhiza",
+      "realm": "land",
+      "quantity": "named fraction of ectomycorrhizal fungal species",
+      "numerator_object": "Linnaean-named ECM species",
+      "denominator_construct": "eDNA sequence clusters treated as the species census",
+      "score": 9.6959,
+      "ruling": "keep",
+      "role": "runner",
+      "status": "confirmed",
+      "factors": {
+        "denom_as_count": 0.8,
+        "rewrite_magnitude": 0.83,
+        "evidence": 0.92,
+        "spoken": 0.38,
+        "prior_overlap": 0.36,
+        "unspoken": 0.62,
+        "novelty_vs_archive": 0.64
+      },
+      "source": "van Galen et al., Current Biology, 9 Jun 2025. Up to 83% of ectomycorrhizal species are dark taxa (DNA only). SPUN: unnamed species cannot enter conservation initiatives. Channel >9 Gt CO2 / year.",
+      "notes": "'Dark taxa' is spoken as a conservation problem. DPC remainder: IUCN/legal machinery requires a name-token; the eDNA denom is refused admission. Adjacent to DCC (sequences already in the file) \u2014 overlap-penalized, not re-issued as DCC."
+    },
+    {
+      "id": "sperm_whale_coda_repertoire",
+      "realm": "animals",
+      "quantity": "size of sperm-whale 'phonetic alphabet'",
+      "numerator_object": "distinct coda types",
+      "denominator_construct": "undefined meaning-space treated as if repertoire-size were a language census",
+      "score": 6.5464,
+      "ruling": "keep",
+      "role": "runner",
+      "status": "unsolved",
+      "factors": {
+        "denom_as_count": 0.45,
+        "rewrite_magnitude": 0.72,
+        "evidence": 0.88,
+        "spoken": 0.18,
+        "prior_overlap": 0.3,
+        "unspoken": 0.82,
+        "novelty_vs_archive": 0.7
+      },
+      "source": "Sharma et al. Nature Communications (7 May 2024): 21 \u2192 ~156 codas. Begu\u0161 vowels, Open Mind 2025; Proc. B 14 Apr 2026. Meaning still unmapped.",
+      "notes": "Weak DPC. Repertoire grew; the meaning-denominator was never issued. Adjacent to FAC (no discriminator for 'language'). Kept only as animal-realm unspoken: combinatorial structure is not a census of statements."
+    },
+    {
+      "id": "income_share_denominator",
+      "realm": "humans",
+      "quantity": "top-income-share inequality series",
+      "numerator_object": "top-quantile fiscal income",
+      "denominator_construct": "national-accounts vs fiscal 'total income' treated as the same observed denom",
+      "score": 6.1327,
+      "ruling": "keep",
+      "role": "runner",
+      "status": "competing",
+      "factors": {
+        "denom_as_count": 0.84,
+        "rewrite_magnitude": 0.5,
+        "evidence": 0.78,
+        "spoken": 0.4,
+        "prior_overlap": 0.22,
+        "unspoken": 0.6,
+        "novelty_vs_archive": 0.78
+      },
+      "source": "Geloso, Magness & Sparks, working-paper revisit posted 4 Oct 2026 (SSRN 4532761 lineage). Roughly half of PSZ vs Auten\u2013Splinter US inequality difference attributed to inconsistent income denominator.",
+      "notes": "Human-realm instance. Not a physical unknown. Kept as runner because the mechanism (privilege of a construct denom) is the same. Does not license a social-science patent."
+    },
+    {
+      "id": "seafloor_visual_fraction",
+      "realm": "ocean",
+      "quantity": "fraction of deep seafloor 'explored'",
+      "numerator_object": "visually imaged area (2,130\u20133,823 km\u00b2)",
+      "denominator_construct": "deep seafloor area (~335.7 million km\u00b2) vs mapped vs sampled, collapsed into one 'explored' denom",
+      "score": 5.7196,
+      "ruling": "keep",
+      "role": "runner",
+      "status": "confirmed",
+      "factors": {
+        "denom_as_count": 0.62,
+        "rewrite_magnitude": 0.7,
+        "evidence": 0.96,
+        "spoken": 0.48,
+        "prior_overlap": 0.34,
+        "unspoken": 0.52,
+        "novelty_vs_archive": 0.66
+      },
+      "source": "Bell et al., Science Advances 11(19):eadp8602 (7 May 2025). DOI 10.1126/sciadv.adp8602. <0.001% visually observed; 65% of observations within 200 nm of US/Japan/New Zealand; 97% of dives by five countries.",
+      "notes": "Bell measured the visual numerator correctly. DPC remainder is the spoken '90% of the ocean is unexplored' which uses a different, unspecified denom (mapped? sampled? visually seen?). Three denoms, one slogan."
+    },
+    {
+      "id": "denominator_neglect_lab_control",
+      "realm": "humans",
+      "quantity": "lab ratio-bias (9/100 vs 1/10)",
+      "numerator_object": "red beans / lives saved (vignette)",
+      "denominator_construct": "bowl size / population in a psychology experiment",
+      "score": 0.0486,
+      "ruling": "control_or_retired",
+      "role": "control",
+      "status": "control",
+      "factors": {
+        "denom_as_count": 0.2,
+        "rewrite_magnitude": 0.15,
+        "evidence": 0.9,
+        "spoken": 0.95,
+        "prior_overlap": 0.1,
+        "unspoken": 0.05,
+        "novelty_vs_archive": 0.9
+      },
+      "source": "Denes-Raj & Epstein 1994; Wikipedia 'denominator neglect' retrieved 2026-10-07. Cognitive bias, not a published natural quantity.",
+      "notes": "Must score near zero. This is the spoken namesake. DPC is not ratio-bias in humans. It is privilege granted to a denom inside a scientific census of nature."
+    },
+    {
+      "id": "photo_z_control",
+      "realm": "outer space",
+      "quantity": "photometric redshift as distance denom",
+      "numerator_object": "galaxy",
+      "denominator_construct": "photo-z posterior already treated as estimand",
+      "score": 0.0176,
+      "ruling": "control_or_retired",
+      "role": "control",
+      "status": "control",
+      "factors": {
+        "denom_as_count": 0.12,
+        "rewrite_magnitude": 0.18,
+        "evidence": 0.85,
+        "spoken": 0.88,
+        "prior_overlap": 0.8,
+        "unspoken": 0.12,
+        "novelty_vs_archive": 0.2
+      },
+      "source": "Euclid photo-z; DESI COSMOS-XMM. ANC/FPC control reused. Missing spectroscopic redshift is estimated with a posterior.",
+      "notes": "Must score near zero. The denom is already a first-class estimand. Kill-rule analogue."
+    }
+  ],
+  "primary": {
+    "id": "nmfs_fes_striped_bass",
+    "realm": "ocean",
+    "quantity": "2024 total striped bass catch (count of fish)",
+    "numerator_object": "striped bass landed or released",
+    "denominator_construct": "Fishing Effort Survey private-boat and shore trips treated as observed",
+    "score": 19.1429,
+    "ruling": "keep",
+    "role": "primary",
+    "status": "confirmed",
+    "factors": {
+      "denom_as_count": 0.94,
+      "rewrite_magnitude": 0.86,
+      "evidence": 1.0,
+      "spoken": 0.2,
+      "prior_overlap": 0.26,
+      "unspoken": 0.8,
+      "novelty_vs_archive": 0.74
+    },
+    "source": "NMFS FES revision, 31 Aug 2026; Marine Fish Conservation Network 2 Oct 2026. 20,822,514 \u2192 14,323,640 (\u221231.2%). Live releases 19,093,770 \u2192 13,111,145 (\u221231.3%).",
+    "notes": "No fish moved. Effort overreporting in two-month waves was the denominator. Catch = CPUE \u00d7 effort. Management did not immediately change; the privileged number remains in the catch-limit machine until stock assessments re-ingest it."
+  },
+  "controls_ok": true,
+  "novelty_capped": 0.32,
+  "coherence": 0.81,
+  "legal": "Research-stage classification. Not a physical discovery, not peer review, not a patent. Timestamp is not filing.",
+  "functions": {
+    "dpc_score": {
+      "times_invoked": 9,
+      "purpose": "Score DPC instances"
+    },
+    "denom_rewrite": {
+      "times_invoked": 5,
+      "purpose": "Test rewrite-without-objects"
+    },
+    "remainder_as_denom": {
+      "times_invoked": 3,
+      "purpose": "Queue Remainder-Growth leftover"
+    }
+  },
+  "rewrites": [
+    {
+      "id": "nmfs_fes_striped_bass",
+      "published_old": 20822514,
+      "published_new": 14323640,
+      "ratio": 0.687892,
+      "relative_change": 0.312108,
+      "percent_change": -31.2108,
+      "objects_moved": false,
+      "mode": "rewrite_without_objects",
+      "dpc_holds": true,
+      "kill_rule_fired": false
+    },
+    {
+      "id": "nmfs_fes_live_releases",
+      "published_old": 19093770,
+      "published_new": 13111145,
+      "ratio": 0.686671,
+      "relative_change": 0.313329,
+      "percent_change": -31.3329,
+      "objects_moved": false,
+      "mode": "rewrite_without_objects",
+      "dpc_holds": true,
+      "kill_rule_fired": false
+    },
+    {
+      "id": "nmfs_summer_flounder_coastwide",
+      "published_old": 29993105,
+      "published_new": 27929969,
+      "ratio": 0.931213,
+      "relative_change": 0.068787,
+      "percent_change": -6.8787,
+      "objects_moved": false,
+      "mode": "small_rewrite",
+      "dpc_holds": true,
+      "kill_rule_fired": false
+    },
+    {
+      "id": "eta_earth_m_raw_to_corrected",
+      "published_old": 0.0403,
+      "published_new": 0.408,
+      "ratio": 10.124069,
+      "relative_change": 9.124069,
+      "percent_change": 912.4069,
+      "objects_moved": false,
+      "mode": "rewrite_without_objects",
+      "dpc_holds": true,
+      "kill_rule_fired": false
+    },
+    {
+      "id": "photo_z_control_nested",
+      "published_old": 1.0,
+      "published_new": 0.995,
+      "ratio": 0.995,
+      "relative_change": 0.005,
+      "percent_change": -0.5,
+      "objects_moved": false,
+      "mode": "nested_close",
+      "dpc_holds": false,
+      "kill_rule_fired": true
+    }
+  ],
+  "remainders": [
+    {
+      "id": "unbinned_contig_discoverable",
+      "named_count": 1.0,
+      "discoverable_count": 20.0,
+      "named_fraction": 0.05,
+      "unnamed_fraction": 0.95,
+      "effort_gain": 0.9,
+      "remainder_grows_with_effort": true,
+      "queued_class": "Remainder-Growth Class (RGC)",
+      "owned_by_dpc": false,
+      "note": "Remainder-Growth is the leftover. DPC does not mint it. The named fraction falling is a consequence, not the privilege."
+    },
+    {
+      "id": "dark_taxa_ectomycorrhiza",
+      "named_count": 17.0,
+      "discoverable_count": 100.0,
+      "named_fraction": 0.17,
+      "unnamed_fraction": 0.83,
+      "effort_gain": 0.7,
+      "remainder_grows_with_effort": true,
+      "queued_class": "Remainder-Growth Class (RGC)",
+      "owned_by_dpc": false,
+      "note": "Remainder-Growth is the leftover. DPC does not mint it. The named fraction falling is a consequence, not the privilege."
+    },
+    {
+      "id": "photo_z_control",
+      "named_count": 90.0,
+      "discoverable_count": 100.0,
+      "named_fraction": 0.9,
+      "unnamed_fraction": 0.1,
+      "effort_gain": 0.4,
+      "remainder_grows_with_effort": false,
+      "queued_class": null,
+      "owned_by_dpc": false,
+      "note": "Remainder-Growth is the leftover. DPC does not mint it. The named fraction falling is a consequence, not the privilege."
+    }
+  ],
+  "queued_leftover": {
+    "name": "Remainder-Growth Class (RGC)",
+    "one_sentence": "Observational effort grows the unnamed remainder faster than the named set.",
+    "not_minted": true,
+    "reason": "Kill rule would differ (saturation / rarefaction). Duals only when kill rules differ. Skill rule 7 leftover for a later session."
+  },
+  "adversarial": {
+    "controls_ok": true,
+    "rewrite_without_objects_holds": true,
+    "control_nested_kills": true,
+    "bocande_2026": "NOT RETRIEVED. Oct-5 leftover named Bocand\u00e9 2026 Denominator Illusion; web search 2026-10-07 returned no matching paper. Type specimen replaced with NMFS FES 2026 (retrieved)."
+  }
+}
